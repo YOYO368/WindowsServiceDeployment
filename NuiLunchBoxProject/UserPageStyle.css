@@ -1,0 +1,132 @@
+﻿body {
+    background-color:gray;
+    height:100%;
+}
+html {
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+}
+form {
+    height: 100%;
+    background-color: gray;
+}
+#wrap {
+    height: 100%;
+    margin: 100px;
+    background-color: whitesmoke;
+}
+#Header {
+    height: 37%;
+    margin-top: 20px;
+    margin-right: 80px;
+    background-color: whitesmoke;
+}
+#LogoImg {
+    Height: 180px;
+    Width: 200px;
+}
+.MenuButton {
+    background-color: transparent;
+    color: cadetblue;
+    font-weight: bold;
+    font-size: 15px;
+    width: 90px;
+    border: none;
+}
+.menu1 {
+    border:none;
+    background-color: transparent;
+    width: 150px;
+    text-align:left;
+}
+.MenuButton:hover {
+    color: red;
+}
+#Content {
+    height: 100%;
+    background-color: whitesmoke;
+}
+#Footer {
+    clear: both;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: lightsalmon;
+}
+.button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+.button4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+}
+
+.button4:hover {
+    background-color: #e7e7e7;
+}
+
+.button3 {
+    background-color: white;
+    color: black;
+    border: 2px solid #f44336;
+}
+
+.button3:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+#headerWrap .header_body .gnb .depth1 > li > a .depth1_menu {
+    display: inline-block;
+    padding: 0 20px;
+    height: 22px;
+    font-size: 0;
+    color: transparent;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+}
+.footer-list-top {
+    width: 33.333%
+}
+
+.footer-list-top > li {
+    text-align: center;
+    padding-bottom: 10px
+}
+
+.footer-list-header {
+    padding: 10px 0 5px 0;
+    color: #fff;
+    font: 2.3vw "Oswald", sans-serif
+}
+.TreeViewStyle
+{
+    background-color:whitesmoke;
+    color:#003366;
+    margin-top: 100px;
+    margin-left:300px;
+    font-size:x-large;
+    width:500px;
+}

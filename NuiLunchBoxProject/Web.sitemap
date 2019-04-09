@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="ViewUserPage.aspx" title="Home"  description="">
+    <siteMapNode url="ViewCart.aspx" title="Cart"  description="" />
+    <siteMapNode url="UserLogin.aspx" title="Login"  description="" >
+      <siteMapNode url="UserRegister.aspx" title="Register"  description="" />
+      <siteMapNode url="UserSearchPasswd.aspx" title="Search Password"  description="" />
+    </siteMapNode>
+    <siteMapNode url="MyAccount.aspx" title="My Account"  description="" />
+    <siteMapNode url="" title="Contact"  description="" >
+    <siteMapNode url="UserCoutantUs.aspx" title="Contactus / Feedback"  description="" />
+    </siteMapNode>
+    <siteMapNode url="UserSiteMap.aspx" title="SiteMap"  description="" />
+    <siteMapNode url="" title="Menu View"  description="" >
+    <siteMapNode url="~/ModifySubDisplayMenu.aspx?Menu_Group=1" title="Salad Menu"  description="" />
+      <siteMapNode url="~/ModifySubDisplayMenu.aspx?Menu_Group=2" title="RiceRoll Menu"  description="" />
+      <siteMapNode url="" title="Korean Style Food"  description="" >
+      <siteMapNode url="~/ModifySubDisplayMenu.aspx?Menu_Group=3" title="Full Package"  description="" />
+      <siteMapNode url="~/ModifySubDisplayMenu.aspx?Menu_Group=4" title="Rice"  description="" />
+      <siteMapNode url="~/ModifySubDisplayMenu.aspx?Menu_Group=5" title="Side Dish"  description="" />
+      </siteMapNode>
+      <siteMapNode url="~/ModifySubDisplayMenu.aspx?Menu_Group=6" title="Sandwich Menu"  description="" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

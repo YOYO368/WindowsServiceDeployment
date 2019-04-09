@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ManagerPage.master.cs" Inherits="NuiLunchBoxProject.ManagerPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="ManagerPageStyle.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 145px;
+        }
+        .auto-style2 {
+            text-align: center;
+        }
+        .auto-style3 {
+            width: 843px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrap">
+            <div id="Header">
+                <table class="auto-style1">
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style2">
+                            <asp:Label ID="Label1" runat="server" Font-Size="X-Large" ForeColor="#CC3300" Text="This page is for manager"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style2">
+                            <asp:Menu ID="Menu1" runat="server" Font-Size="Large" ForeColor="#669999" Orientation="Horizontal" Width="100%" StaticPopOutImageTextFormatString=""
+                                 StaticEnableDefaultPopOutImage="False" DynamicEnableDefaultPopOutImage="False" StaticSubMenuIndent="16px" BackColor="Transparent" PathSeparator="\">
+                                <DynamicHoverStyle ForeColor="#CC3300" />
+                                <DynamicMenuItemStyle ForeColor="#336699" HorizontalPadding="10px" VerticalPadding="10px" />
+                                <DynamicMenuStyle HorizontalPadding="20px" VerticalPadding="10px" />
+                                <DynamicSelectedStyle ForeColor="#FF0066" />
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="~/ViewManagerPage.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/ManagerLogout.aspx" Text="Manager Mode Logout" Value="Manager Mode Logout"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/ViewOrder.aspx" Text="View Order" Value="View Order"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/ModifyMainDisplayMenu.aspx" Text="Modify Main Display Menu" Value="Modify Main Display Menu"></asp:MenuItem>
+                                    <asp:MenuItem Text="Modify Sub Display Menu" Value="Modify Sub Display Menu">
+                                        <asp:MenuItem NavigateUrl="~/ModifySubDisplayMenu.aspx?Menu_Group=1" Text="Salad Menu" Value="Salad Menu"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/ModifySubDisplayMenu.aspx?Menu_Group=2" Text="RiceRoll Menu" Value="RiceRoll Menu"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/ModifySubDisplayMenu.aspx?Menu_Group=3" Text="Full Package Menu" Value="Full Package Menu"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/ModifySubDisplayMenu.aspx?Menu_Group=4" Text="Rice Menu" Value="Rice Menu"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/ModifySubDisplayMenu.aspx?Menu_Group=5" Text="Side Dish Menu" Value="Side Dish Menu"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/ModifySubDisplayMenu.aspx?Menu_Group=6" Text="Sandwich Menu" Value="Sandwich Menu"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/ModifyCustomerInformation.aspx" Text="Modify Customer Information" Value="Modify Customer Information"></asp:MenuItem>
+                                </Items>
+                                <StaticMenuItemStyle BorderStyle="None" BorderWidth="1px" HorizontalPadding="15px" />
+                            </asp:Menu>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div id="Content" class="auto-style3">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="Footer">
+                <div class="w3-cell-row" style="width:100%">
+                    <div class="w3-container w3-black w3-cell-middle">
+                        <i class="glyphicon glyphicon-home"> About Our Store</i><br />
+                        Address: 2 beach road, Auckland CBD<br />
+                        Mobile : 027 268 4940<br />
+                         Open  : 07 AM<br />
+                         Close : 03 PM<br />
+                    </div>
+               </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

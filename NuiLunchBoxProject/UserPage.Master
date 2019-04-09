@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserPage.Master.cs" Inherits="NuiLunchBoxProject.MainPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="UserPageStyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrap">
+            <div id="Header">
+                <table>
+                     <tr>
+                        <td style="height:20px">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" style="width: 600px">&nbsp;</td>
+                        <td style="width: 90px"><a href="ViewCart.aspx"><asp:Button class="MenuButton" ID="btnCart" runat="server" Text="Cart" OnClick="btnCart_Click" CausesValidation="False" PostBackUrl="~/ViewCart.aspx" /></a></td>
+                        <%if (Session["User_ID"] != null && !Session["User_ID"].ToString().Equals("")){ %>
+                                <td style="width: 90px"><a href="Logout.aspx"><asp:Button class="MenuButton" ID="btnLogout" runat="server" Text= "Logout" OnClick="btnLogout_Click" PostBackUrl="~/UserLogout.aspx" CausesValidation="False" /></a></td>
+                        <% } else {%>
+                                <td style="width: 90px"><a href="Login.aspx"><asp:Button class="MenuButton" ID="btnLogin" runat="server" Text= "Login" OnClick="btnLogin_Click" PostBackUrl="~/UserLogin.aspx" CausesValidation="False" /></a></td>
+                        <% }%>
+                        <td style="width: 90px"><a href="MyAccount.aspx"><asp:Button class="MenuButton" ID="btnMyAccount" runat="server" Text="My Account" PostBackUrl="~/MyAccount.aspx" OnClick="btnMyAccount_Click" CausesValidation="False" /></a></td>
+                        <td style="width: 90px"><a href="ContactUs.aspx"><asp:Button class="MenuButton" ID="btnContact" runat="server" Text="Contact" OnClick="btnContact_Click" PostBackUrl="~/UserContactUs.aspx" CausesValidation="False" /></a></td>
+                        <td style="width: 90px"><a href="UserSiteMap.aspx"><asp:Button class="MenuButton" ID="btnSiteMap" runat="server" Text="SiteMap" OnClick="btnSiteMap_Click" PostBackUrl="~/UserSiteMap.aspx" CausesValidation="False" /></a></td>
+                    </tr>
+                    <tr>
+                        <td colspan ="4", rowspan="4"><img id="LogoImg" src="./Images/Nui-Logo.png" alt="Logo" style="margin-left:100px" /></td>
+                        <td colspan="8" style="width: 800px">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" style="width: 800px">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" style="width: 800px">
+                            <asp:Menu ID="Main_Menu" runat="server" Orientation="Horizontal" Font-weight="bold"
+                                StaticEnableDefaultPopOutImage="False" Width="800px" EnableTheming="True" Font-Strikeout="True"
+                                DynamicEnableDefaultPopOutImage="False" StaticSubMenuIndent="16px" Font-Size="X-Large">
+                                <DynamicHoverStyle ForeColor="#CC0099" Font-Bold="True" Font-Size="18px" />
+                                <DynamicMenuItemStyle VerticalPadding="10px" BackColor="Transparent" ForeColor="#666699" Font-Size="Medium" />
+                                <DynamicMenuStyle HorizontalPadding="20px" VerticalPadding="10px" />
+                                <DynamicSelectedStyle ForeColor="Blue" HorizontalPadding="5px" Font-Size="Medium" />
+                                <LevelMenuItemStyles>
+                                    <asp:MenuItemStyle CssClass="menu1" />
+                                </LevelMenuItemStyles>
+                               <Items>
+                                    <asp:MenuItem NavigateUrl="~/ViewUserPage.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                    <asp:MenuItem Text="Salad" Value="Salad" NavigateUrl="~/UserMenuViewPage.aspx?Menu_Group=1"></asp:MenuItem>
+                                    <asp:MenuItem Text="RiceRoll" Value="RiceRoll" NavigateUrl="~/UserMenuViewPage.aspx?Menu_Group=2"></asp:MenuItem>
+                                    <asp:MenuItem Text="Korean Style" Value="Korean Style">
+                                        <asp:MenuItem Text="Full Package" Value="Full Package" NavigateUrl="~/UserMenuViewPage.aspx?Menu_Group=3"></asp:MenuItem>
+                                        <asp:MenuItem Text="Rice" Value="Rice" NavigateUrl="~/UserMenuViewPage.aspx?Menu_Group=4"></asp:MenuItem>
+                                        <asp:MenuItem Text="Side Dish" Value="Side Dish" NavigateUrl="~/UserMenuViewPage.aspx?Menu_Group=5"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Sandwich" Value="&nbsp;&nbsp;&nbsp;Sandwich" NavigateUrl="~/UserMenuViewPage.aspx?Menu_Group=6"></asp:MenuItem>
+                                </Items>
+                                <StaticHoverStyle ForeColor="Red" />
+                                <StaticMenuItemStyle Font-Bold="True" Font-Size="Large" ForeColor="#666666" HorizontalPadding="20px" Width="160px" />
+                                <StaticMenuStyle HorizontalPadding="0px" />
+                                </asp:Menu>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div id="Content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <footer id="Footer">
+                <div class="w3-cell-row" style="width:100%">
+                    <div class="w3-container w3-black w3-cell-middle">
+                        <br />
+                        <i class="glyphicon glyphicon-home"> About Our Store</i><br />
+                        Address: 2 beach road, Auckland CBD<br />
+                        Mobile : 027 268 4940<br />
+                         Open  : 07 AM<br />
+                         Close : 03 PM<br />
+                    </div>
+               </div>
+            </footer>
+        </div>
+     </form>
+</body>
+</html>
